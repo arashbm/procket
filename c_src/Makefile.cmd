@@ -1,4 +1,4 @@
-CMD_DIR= $(dir$(lastword $(MAKEFILE_LIST)))/../priv
+CMD_DIR= $(dir$(lastword $(MAKEFILE_LIST)))../priv
 CMD_PATH= $(CMD_DIR)/procket
 
 ERTS_INCLUDE_DIR ?= $(shell erl -noshell -s init stop -eval "io:format(\"~s/erts-~s/include/\", [code:root_dir(), erlang:system_info(version)]).")
